@@ -1,0 +1,17 @@
+name: 'sum'
+description: 'sum of numbers'
+inputs:
+ destinationFolder: #path
+   description: 'sum'
+   required: true
+   default: ~
+   
+outputs:
+     sum:
+      description: "sum"
+      value: ${{ steps.random-number-generator.outputs.sum }}
+runs:
+  using: "composite"
+  steps:
+   -run: ${{ github.action_path }}/sum.sh
+ 
