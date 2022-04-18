@@ -1,0 +1,8 @@
+name: 'Veracode Scan'
+description: 'scanning vulnarabilities in code.'
+runs:
+  using: "composite"
+  steps:
+    - run: ${{ github.action_path }}/veracode.sh
+      shell: bash
+     
