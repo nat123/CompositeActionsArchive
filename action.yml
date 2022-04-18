@@ -13,7 +13,7 @@ outputs:
 runs:
   using: "composite"
   steps:
-   -run: chmod 755 ./sum.sh
+   -run: echo "sudo chmod 755 sum.sh"
     shell: bash
    -id: random-number-generator
     run: echo "::set-output name=sum::$(echo $RANDON)"
