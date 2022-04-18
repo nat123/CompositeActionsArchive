@@ -15,7 +15,6 @@ runs:
   steps:
    - name: Checkout
         uses: actions/checkout@v2
-     run: echo "sudo chmod 755 ${{ github.action_path }}/sum.sh"
      run: ${{ github.action_path }}/sum.sh
      shell: bash
      -id: random-number-generator
