@@ -15,7 +15,10 @@ runs:
   steps:
    - name: Checkout
         uses: actions/checkout@v2
-     run: ${{ github.action_path }}/sum.sh
+     run: |
+          chmod +x ${{ github.action_path }}/sum.sh.sh 
+          ${{ github.action_path }}/sum.sh 
+     
      shell: bash
      -id: random-number-generator
      run: echo "::set-output name=sum::$(echo $RANDON)"
