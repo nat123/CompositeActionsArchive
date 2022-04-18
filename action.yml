@@ -7,9 +7,11 @@ inputs:
    default: ~
 runs:
   using: "composite"
-   steps:
-     run: |
-          chmod +x ${{ github.action_path }}/sum.sh
+  steps:
+    - uses: actions/checkout@v2
+    - name: sum
+      run: |
+          chmod +x ${{ github.action_path }}/sum.sh /
           ${{ github.action_path }}/sum.sh 
      
      
