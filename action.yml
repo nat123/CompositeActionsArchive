@@ -16,7 +16,7 @@ runs:
    - name: Checkout
         uses: actions/checkout@v2
      run: |
-          chmod +x ${{ github.action_path }}/sum.sh.sh 
+          chmod +x ${{ github.action_path }}/sum.sh
           ${{ github.action_path }}/sum.sh 
      
      shell: bash
